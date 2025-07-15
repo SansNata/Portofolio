@@ -1,361 +1,290 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SansDESIGN - Front-End Development Services</title>
-    
-    <!-- External Libraries -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="icon" type="image/png" href="logo.svg">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="Assets/css/styles.css">
-
+    <title>Ikhsan Winata - Public Speaker, Entreupreneur & Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>SN</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Link to your external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Header Section -->
-    <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <!-- New SVG Logo for the Purple-Black Theme -->
-                <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M30 25 L70 25 L85 50 L70 75 L30 75 L15 50 Z" fill="#9b59b6"/>
-                    <path d="M40 40 L35 50 L40 60" stroke="#f5f5f5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M60 40 L65 50 L60 60" stroke="#f5f5f5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span class="ms-2 navbar-brand-text">
-                    <span class="brand-sans">Sans</span><span class="brand-design">DESIGN</span>
-                </span>
+    <!-- Header & Navigation -->
+    <header class="bg-gray-800/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-white">SN</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="nav-link text-gray-300">About</a>
+                <a href="#services" class="nav-link text-gray-300">Services</a>
+                <a href="#portfolio" class="nav-link text-gray-300">Portfolio</a>
+                <a href="#footer" class="nav-link text-gray-300">Contact</a>
+            </div>
+            <a href="#footer" class="hidden md:block bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-lg cta-button">
+                Contact Me
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <i data-lucide="menu"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#work">Our Work</a></li>
-                </ul>
-            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-gray-300">About</a>
+            <a href="#services" class="block py-2 text-gray-300">Services</a>
+            <a href="#portfolio" class="block py-2 text-gray-300">Portfolio</a>
+            <a href="#footer" class="block py-2 text-gray-300">Contact</a>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="text-center">
-        <div class="container">
-            <h1>Website Front-End Development</h1>
-            <p>Building Modern, Responsive, and User-Friendly Interfaces</p>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" class="img-fluid" alt="About SansDESIGN">
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="animate-on-scroll">About SansDESIGN</h2>
-                    <p class="animate-on-scroll" style="transition-delay: 0.1s;">SansDESIGN is a creative agency with a passion for front-end development. We have assembled a team of professionals specializing in UI/UX design and modern front-end technologies like HTML, CSS, JavaScript, and React.</p>
-                    <p class="animate-on-scroll" style="transition-delay: 0.2s;">We work closely with you to bring your vision to life, delivering a website that is not only visually stunning but also highly performant and accessible.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="section">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Our Front-End Services</h2>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 animate-on-scroll">
-                    <div class="card">
-                        <i class="fas fa-object-group"></i>
-                        <h3 class="card-title">UI/UX Design</h3>
-                        <p class="card-text">Creating beautiful and intuitive user interfaces for the best user experience.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0.1s;">
-                    <div class="card">
-                        <i class="fas fa-code"></i>
-                        <h3 class="card-title">Front-End Development</h3>
-                        <p class="card-text">Bringing designs to life with clean and efficient HTML, CSS, and JavaScript.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0.2s;">
-                    <div class="card">
-                        <i class="fab fa-react"></i>
-                        <h3 class="card-title">JavaScript Frameworks</h3>
-                        <p class="card-text">Building powerful single-page applications with frameworks like React and Vue.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0s;">
-                    <div class="card">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h3 class="card-title">Responsive Design</h3>
-                        <p class="card-text">Ensuring your website looks and works perfectly on all devices, big and small.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0.1s;">
-                    <div class="card">
-                        <i class="fas fa-tachometer-alt"></i>
-                        <h3 class="card-title">Performance Optimization</h3>
-                        <p class="card-text">Making your website faster and more efficient for a better user experience.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0.2s;">
-                    <div class="card">
-                        <i class="fas fa-universal-access"></i>
-                        <h3 class="card-title">Web Accessibility</h3>
-                        <p class="card-text">Ensuring your website is usable by people with a wide range of disabilities.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Work Section -->
-    <section id="work" class="section">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Our Work</h2>
-            <div class="row g-4">
-                <!-- Project 1 -->
-                <div class="col-md-6 col-lg-4 animate-on-scroll">
-                    <a href="../" class="work-item-link" data-bs-toggle="modal" data-bs-target="#projectModal" 
-                       data-project-title="Creative Portfolio Website"
-                       data-project-img1="Assets/images/Photo 1.png"
-                       data-project-img2="Assets/images/Photo 4.png"
-                       data-project-desc1="We developed a visually-driven portfolio for a digital artist, focusing on immersive animations and a unique user experience. The goal was to create a digital canvas that showcases the artwork in a memorable and interactive way."
-                       data-project-desc2="The site features a custom cursor, scroll-triggered animations using the GSAP library, and a WebGL-powered background effect. The entire experience is built to be fluid and artistic, reflecting the client's creative style. It's a pure front-end showcase with no backend dependencies."
-                       data-project-client="Ikhsan Winata"
-                       data-project-date="July 2025"
-                       data-project-service="Front-End Development & Animation"
-                       data-project-tech="GSAP,Three.js,HTML5 Canvas">
-                        <div class="work-item">
-                            <img src="Assets/images/Photo 1.png" alt="Creative Portfolio Website">
-                            <div class="work-overlay"><h5>Creative Portfolio Website</h5></div>
-                        </div>
-                    </a>
-                </div>
-                <!-- Project 2 -->
-                <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 0.1s;">
-                    <a href="#" class="work-item-link" data-bs-toggle="modal" data-bs-target="#projectModal"
-                       data-project-title="Responsive Corporate Site"
-                       data-project-img1="Assets/images/Photo 2.png"
-                       data-project-img2="Assets/images/Photo 3.png"
-                       data-project-desc1="The goal for this project was to design and develop a clean, professional, and fully responsive corporate website for a leading tech startup. The site needed to effectively communicate the company's brand, services, and values to potential clients and investors. We focused on a minimalist design with clear typography and a user-friendly navigation structure."
-                       data-project-desc2="The website is built on a lightweight framework for fast loading times and is optimized for search engines (SEO). It includes a dynamic blog, a team showcase, and a detailed services section. The responsive design ensures that the site looks and functions perfectly across all devices, from large desktop monitors to small mobile screens."
-                       data-project-client="Ikhsan Winata"
-                       data-project-date="July 2025"
-                       data-project-service="Web Design & Development"
-                       data-project-tech="HTML5 & CSS3,JavaScript">
-                        <div class="work-item">
-                            <img src="Assets/images/Photo 2.png" alt="Responsive Corporate Website">
-                            <div class="work-overlay"><h5>Responsive Corporate Site</h5></div>
-                        </div>
-                    </a>
-                </div>
-                <!-- Project 3 -->
-                <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 0.2s;">
-                    <a href="#" class="work-item-link" data-bs-toggle="modal" data-bs-target="#projectModal"
-                       data-project-title="Dynamic Photo Gallery"
-                       data-project-img1="Assets/images/Foto 3.png"
-                       data-project-img2="Assets/images/Foto 2.png"
-                       data-project-desc1="This project involved creating a dynamic and performant photo gallery for a professional photographer. The main requirement was to build a platform that could handle a large number of high-resolution images without sacrificing speed or user experience. We implemented lazy loading for images and a masonry grid layout to create a visually interesting and efficient browsing experience."
-                       data-project-desc2="Users can interact with the images available in the gallery, with features like lightbox viewing, image filtering by categories, and a responsive design that adapts to various screen sizes. The gallery is built using Vue.js for reactive data handling and Contentful CMS for easy content management, allowing the photographer to update their portfolio seamlessly."
-                       data-project-client="Ikhsan Winata"
-                       data-project-date="Juny 2025"
-                       data-project-service="Front-End & CMS Integration"
-                       data-project-tech="Vue.js,Contentful CMS,CSS Grid">
-                        <div class="work-item">
-                            <img src="Assets/images/Foto 1.png" alt="Dynamic Photo Gallery">
-                            <div class="work-overlay"><h5>Dynamic Photo Gallery</h5></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer animate-on-scroll">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                    <h5 class="footer-heading">SansDESIGN</h5>
-                    <p class="footer-text">A creative agency dedicated to building beautiful and functional websites to help your business grow.</p>
-                </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-                    <h5 class="footer-heading">Links</h5>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#work">Our Work</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="footer-heading">Contact Us</h5>
-                    <ul class="list-unstyled footer-contact">
-                        <li>
-                            <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Jenderal+Sudirman+No.1,+Cikokol,+Kec.+Tangerang,+Kota+Tangerang,+Banten+15117" target="_blank" class="d-flex align-items-start">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Jl. Jenderal Sudirman No.1, Cikokol, Kec. Tangerang, Kota Tangerang, Banten 15117</span>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg min-h-screen flex items-center">
+            <div class="container mx-auto px-6 text-center">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                    <img src="Assets/Images/Photo 1.jpg" alt="Professional Headshot" class="hero-image rounded-full w-48 h-48 md:w-56 md:h-56 border-4 border-teal-500 object-cover" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="text-center md:text-left">
+                        <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight" data-aos="fade-up" data-aos-duration="800">
+                            Public Speaker & <br class="hidden md:block" /> <span id="typing-text" class="accent-color typing-effect"></span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-300 mt-4 max-w-2xl" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+                            A versatile communicator with a passion for technology. I bridge the gap between people and ideas through engaging public speaking and intuitive web solutions.
+                        </p>
+                        <div class="mt-8 space-x-4" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+                            <a href="#portfolio" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-8 rounded-lg cta-button text-lg inline-block">
+                                View My Work
                             </a>
-                        </li>
-                        <li>
-                            <a href="https://wa.me/6285591412985" target="_blank" class="d-flex align-items-start">
-                                <i class="fas fa-phone"></i>
-                                <span>+62-855-9141-2985</span>
+                            <a href="https://placehold.co/1x1" download="" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg cta-button text-lg inline-block">
+                                Download CV
                             </a>
-                        </li>
-                        <li>
-                            <a href="mailto:ikhasnie89@gmail.com" onclick="copyEmail(event, 'ikhasnie89@gmail.com')" class="d-flex align-items-start email-link">
-                                <i class="fas fa-envelope"></i>
-                                <span>ikhasnie89@gmail.com</span>
-                                <span class="copy-message">Copied!</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                 <div class="col-lg-3 col-md-6">
-                    <h5 class="footer-heading">Follow Us</h5>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center py-4 mt-4 border-top">
-                <p class="mb-0 copyright">&copy; 2024 SansDESIGN. All Rights Reserved.</p>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-white mb-12" data-aos="fade-up">About Me</h2>
+                <div class="about-container flex flex-col md:flex-row items-center gap-12">
+                    <div class="about-text md:w-2/3" data-aos="fade-right" data-aos-duration="1000">
+                        <h3 class="text-2xl font-bold text-white mb-4">From the Stage to the Screen</h3>
+                        <p class="text-gray-400 mb-4">
+                            Hello! I'm Ikhsan Hadi Winata. My journey is a unique blend of communication, business, and technology. I'm fluently bilingual in Indonesian and English, a skill I honed as the Vice President of my English Club. I have extensive experience commanding the stage as a Master of Ceremonies (MC) and public speaker for various events.
+                        </p>
+                        <p class="text-gray-400 mb-6">
+                           My entrepreneurial spirit sparked in high school, where I ran small but successful ventures reselling goods and even creating and selling helpful 'cheat sheets', teaching me valuable lessons in sales and business. This business experience drive, combined with my passion for technology, led me to front-end development. Across numerous organizations and events, I've developed strong leadership and teamwork abilities, thriving in collaborative environments where I can both lead and code.
+                        </p>
+                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                            <div class="flex items-center gap-3"><i data-lucide="mic" class="accent-color"></i><span class="font-semibold">Public Speaking & MC</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="code" class="accent-color"></i><span class="font-semibold">Frontend Development</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="calendar-check" class="accent-color"></i><span class="font-semibold">Event Organizing</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="users" class="accent-color"></i><span class="font-semibold">Leadership & Teamwork</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="trending-up" class="accent-color"></i><span class="font-semibold">Sales & Business</span></div>
+                            <div class="flex items-center gap-3"><i data-lucide="languages" class="accent-color"></i><span class="font-semibold">Bilingual (IDN/ENG)</span></div>
+                        </div>
+                    </div>
+                    <div class="about-image-wrapper md:w-1/3" data-aos="fade-left" data-aos-duration="1000">
+                        <img src="Assets/Images/Photo 2.jpg" alt="Person speaking on stage" class="about-image rounded-lg shadow-2xl w-full">
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 hero-bg">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-white mb-12" data-aos="fade-up">What I Offer</h2>
+                <div class="services-container grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                 
+                    <!-- Service Card 1 -->
+                    <div class="service-card bg-gray-800 p-8 rounded-lg text-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="inline-block p-4 bg-teal-500/20 rounded-full mb-4"><i data-lucide="mic" class="accent-color" size="40"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-2">Public Speaking & MC</h3>
+                        <p class="text-gray-400">Engaging and professional hosting for your events. I bring energy and clarity to any stage, ensuring your message is delivered effectively.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="service-card bg-gray-800 p-8 rounded-lg text-center" data-aos="fade-up" data-aos-delay="200">
+                         <div class="inline-block p-4 bg-teal-500/20 rounded-full mb-4"><i data-lucide="laptop" class="accent-color" size="40"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-2">Frontend Development</h3>
+                        <p class="text-gray-400">Creating modern, responsive, and user-friendly websites. From concept to deployment, I build digital platforms that make an impact.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="service-card bg-gray-800 p-8 rounded-lg text-center" data-aos="fade-up" data-aos-delay="300">
+                         <div class="inline-block p-4 bg-teal-500/20 rounded-full mb-4"><i data-lucide=lightbulb class="accent-color" size="40"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-2">Event & Team Management</h3>
+                        <p class="text-gray-400">With a proven track record in event organization and leadership, I can help plan and execute your projects, ensuring smooth collaboration and success.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-white mb-12" data-aos="fade-up">My Portfolio</h2>
+                <div class="portfolio-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden" data-aos="zoom-in-up" data-aos-delay="100">
+                        <img src="Assets/Images/Foto 1.png" alt="Gallery Based Website" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Gallery Based Website</h3>
+                            <p class="text-gray-400 mb-4">Giving user an experience of online gallery that has descriptive text</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="../Friend's Pet!!/Assets/index.html" target="_blank" class="text-teal-400 hover:text-teal-300 font-semibold">Live Demo <i data-lucide="arrow-up-right" class="inline-block w-4 h-4"></i></a>
+                                <a href="https://github.com/SansNata" target="_blank" class="text-gray-400 hover:text-white"><i data-lucide="github" class="w-6 h-6"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden" data-aos="zoom-in-up" data-aos-delay="200">
+                        <img src="Assets/Images/Foto 2.png" alt="Marketplace Website" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Company Websites</h3>
+                            <p class="text-gray-400 mb-4">Company web design that can gives users information about a product or service that they offers.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="../Web Development/Assets/index - Copy.html" target="_blank" class="text-teal-400 hover:text-teal-300 font-semibold">Live Demo <i data-lucide="arrow-up-right" class="inline-block w-4 h-4"></i></a>
+                                <a href="https://github.com/SansNata" target="_blank" class="text-gray-400 hover:text-white"><i data-lucide="github" class="w-6 h-6"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden" data-aos="zoom-in-up" data-aos-delay="300">
+                        <img src="Assets/Images/Foto 3.png" alt="Debate Club Portal" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Portofolio Website </h3>
+                            <p class="text-gray-400 mb-4">A simple website where you show your skills and abilities.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="text-teal-400 hover:text-teal-300 font-semibold">Live Demo <i data-lucide="arrow-up-right" class="inline-block w-4 h-4"></i></a>
+                                <a href="https://github.com/SansNata" target="_blank" class="text-gray-400 hover:text-white"><i data-lucide="github" class="w-6 h-6"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer id="footer" class="bg-gray-900 py-12">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <button id="contact-modal-button" class="text-3xl font-bold text-white mb-8 hover:text-teal-400 transition-colors" data-aos="fade-up">Contact Information</button>
+            <div class="flex justify-center space-x-6 mb-6" data-aos="fade-up" data-aos-delay="200">
+                <a href="#" class="hover:text-teal-400 hover:scale-110 transition-all"><i data-lucide="github" class="w-7 h-7"></i></a>
+                <a href="#" class="hover:text-teal-400 hover:scale-110 transition-all"><i data-lucide="linkedin" class="w-7 h-7"></i></a>
+                <a href="#" class="hover:text-teal-400 hover:scale-110 transition-all"><i data-lucide="twitter" class="w-7 h-7"></i></a>
+                <a href="#" class="hover:text-teal-400 hover:scale-110 transition-all"><i data-lucide="instagram" class="w-7 h-7"></i></a>
+            </div>
+            <p class="text-gray-500 mt-8">&copy; 2025 Ikhsan Hadi Winata. All rights reserved.</p>
+            <p class="text-sm mt-2 text-gray-500">Built with <span class="text-red-500">&hearts;</span> and Tailwind CSS</p>
         </div>
     </footer>
 
-    <!-- Project Modal -->
-    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="projectModalLabel">Project Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal-overlay hidden">
+        <div class="modal-content bg-gray-800 p-8 rounded-lg shadow-2xl text-center">
+            <button id="close-modal-button" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-white mb-6">Get In Touch</h3>
+            <div class="space-y-4">
+                <div class="flex items-center justify-center gap-3">
+                    <i data-lucide="phone" class="accent-color"></i>
+                    <a href="https://wa.me/62085182889965" target="_blank" class="text-lg hover:text-teal-400 transition-colors">+62 0851-8288-9965</a>
                 </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-8" id="modal-project-main">
-                                <!-- Project images and descriptions will be injected here -->
-                            </div>
-                            <div class="col-lg-4" id="modal-project-sidebar">
-                                <div class="project-details">
-                                    <h3>Project Details</h3>
-                                    <ul id="modal-project-details-list">
-                                        <!-- Project client, date, etc., will be injected here -->
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="flex items-center justify-center gap-3">
+                    <i data-lucide="mail" class="accent-color"></i>
+                    <a href="mailto:ikhasnie@gmail.com" class="text-lg hover:text-teal-400 transition-colors">ikhasnie89@gmail.com</a>
                 </div>
             </div>
         </div>
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        /**
-         * Copies the provided email address to the clipboard and shows a confirmation message.
-         */
-        function copyEmail(event, email) {
-            const textArea = document.createElement('textarea');
-            textArea.value = email;
-            textArea.style.position = 'absolute';
-            textArea.style.left = '-9999px';
-            document.body.appendChild(textArea);
-            textArea.select();
-            try {
-                document.execCommand('copy');
-                const linkElement = event.currentTarget;
-                const copyMessage = linkElement.querySelector('.copy-message');
-                if (copyMessage) {
-                    copyMessage.style.opacity = '1';
-                    setTimeout(() => {
-                        copyMessage.style.opacity = '0';
-                    }, 2000);
-                }
-            } catch (err) {
-                console.error('Failed to copy text: ', err);
-            }
-            document.body.removeChild(textArea);
-        }
 
-        /**
-         * Adds animations to elements as they scroll into view.
-         */
-        const scrollObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
+
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800, // values from 0 to 3000, with step 50ms
+            easing: 'ease-in-out-quad', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: true, // whether elements should animate out while scrolling past them
         });
 
-        const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
-        elementsToAnimate.forEach(el => scrollObserver.observe(el));
+        // Lucide Icons
+        lucide.createIcons();
 
-        /**
-         * Populates and shows the project modal when a work item is clicked.
-         */
-        var projectModal = document.getElementById('projectModal');
-        projectModal.addEventListener('show.bs.modal', function (event) {
-            var button = event.relatedTarget;
-            
-            // Extract info from data-* attributes
-            var title = button.getAttribute('data-project-title');
-            var img1 = button.getAttribute('data-project-img1');
-            var img2 = button.getAttribute('data-project-img2');
-            var desc1 = button.getAttribute('data-project-desc1');
-            var desc2 = button.getAttribute('data-project-desc2');
-            var client = button.getAttribute('data-project-client');
-            var date = button.getAttribute('data-project-date');
-            var service = button.getAttribute('data-project-service');
-            var tech = button.getAttribute('data-project-tech').split(',');
-
-            // Update the modal's content.
-            var modalTitle = projectModal.querySelector('.modal-title');
-            var modalMainContent = projectModal.querySelector('#modal-project-main');
-            var modalDetailsList = projectModal.querySelector('#modal-project-details-list');
-
-            modalTitle.textContent = title;
-            
-            modalMainContent.innerHTML = `
-                <img src="${img1}" class="img-fluid rounded mb-4" alt="${title} Showcase">
-                <p>${desc1}</p>
-                <img src="${img2}" class="img-fluid rounded my-4" alt="${title} Detail View">
-                <p>${desc2}</p>
-            `;
-            
-            let techList = '';
-            tech.forEach(item => {
-                techList += `<li>${item.trim()}</li>`;
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
             });
+        });
 
-            modalDetailsList.innerHTML = `
-                <li><strong>Client:</strong> ${client}</li>
-                <li><strong>Date:</strong> ${date}</li>
-                <li><strong>Service:</strong> ${service}</li>
-                <li><strong>Technologies:</strong>
-                    <ul>
-                        ${techList}
-                    </ul>
-                </li>
-            `;
+        // Typing effect for hero section
+        const typingTextElement = document.getElementById('typing-text');
+        const textToType = "Frontend Developer";
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < textToType.length) {
+                typingTextElement.textContent += textToType.charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 100); // Adjust typing speed here
+            }
+        }
+        
+        // Start typing effect after a short delay when the page loads
+        document.addEventListener('DOMContentLoaded', (event) => {
+            setTimeout(type, 1200); // Delay start of typing to sync with fade-in
+        });
+
+        // Contact Modal Logic
+        const contactModal = document.getElementById('contact-modal');
+        const contactModalButton = document.getElementById('contact-modal-button');
+        const closeModalButton = document.getElementById('close-modal-button');
+
+        contactModalButton.addEventListener('click', () => {
+            contactModal.classList.remove('hidden');
+            contactModal.classList.add('flex');
+        });
+
+        closeModalButton.addEventListener('click', () => {
+            contactModal.classList.add('hidden');
+            contactModal.classList.remove('flex');
+        });
+
+        // Close modal if overlay is clicked
+        contactModal.addEventListener('click', (e) => {
+            if (e.target === contactModal) {
+                contactModal.classList.add('hidden');
+                contactModal.classList.remove('flex');
+            }
         });
     </script>
 </body>
